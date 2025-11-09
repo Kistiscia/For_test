@@ -4,7 +4,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var studyPlanRoute = require('./routes/studyplanRoute');
+var studyplanRoute = require('./routes/studyplanRoute');
 
 var app = express();
 
@@ -16,7 +16,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use("/intproj25/CS04/itb-ecors", studyPlanRoute);
+app.use("/intproj25/CS04/itb-ecors", studyplanRoute);
 
 
 module.exports = app;

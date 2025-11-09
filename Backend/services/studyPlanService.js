@@ -1,10 +1,10 @@
 
-const StudyPlanRepository = require("../repositories/studyplanRepository");
+const studyplanRepository = require("../repositories/studyplanRepository");
 
-const StudyplanService = {
+const studyplanService = {
     getAllStudyPlans: (callback) => {
-        StudyPlanRepository.getAll(callback);
+        studyplanRepository.getAll(callback);
     }
 };
 
-module.exports = StudyplanService;
+module.exports = studyplanService;

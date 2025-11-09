@@ -12,12 +12,12 @@ db.connect(err => {
     console.log("Connected to MySQL 🥰");
 });
 
-const StudyPlanRepository = {
+const studyplanRepository = {
     getAll: (callback) => {
         const sql = "SELECT * FROM study_plan ORDER BY id ASC";
         db.query(sql, callback);
     }
 };
 
-module.exports = StudyPlanRepository;
+module.exports = studyplanRepository;
 
