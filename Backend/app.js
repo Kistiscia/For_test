@@ -4,7 +4,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var studyPlanRoute = require('./routes/studyPlanRoute');
+var studyPlanRoute = require('./routes/studyplanRoute');
 
 var app = express();
 
@@ -16,10 +16,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use("/api/study_plans", studyPlanRoute);
+app.use("/intproj25/CS04/itb-ecors", studyPlanRoute);
+
 
 module.exports = app;
 
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
+app.listen(3000, "0.0.0.0", () => {
+    console.log("Server running on http://0.0.0.0:3000 😋" );
+});

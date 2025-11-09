@@ -1,7 +1,7 @@
 
-const StudyPlanService = require("../services/studyPlanService");
+const StudyPlanService = require("../services/studyplanService");
 
-const StudyPlanController = {
+const studyplanController = {
     getAll: (req, res) => {
         StudyPlanService.getAllStudyPlans((err, results) => {
             if (err) return res.status(500).json({ error: err.message });
@@ -10,4 +10,4 @@ const StudyPlanController = {
     }
 };
 
-module.exports = StudyPlanController;
+module.exports = studyplanController;
